@@ -1,0 +1,1067 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>快捷交易接口 &mdash; 立收产品接口文档 V1.0 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="对账文件" href="../dzFile/index.html" />
+    <link rel="prev" title="会员管理接口" href="../users/index.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html"> 立收产品接口文档
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="搜索" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../introduce/index.html">开发说明</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide/index.html">技术方案</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fields/index.html">报文字段说明</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/index.html">会员管理接口</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">快捷交易接口</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">交易概览</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#s2001">快捷签约（前台）-S2001</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id3">概述</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">交易流程</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">请求报文</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id6">应答报文</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id7">签约结果异步回调</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#s2002">签约查询-S2002</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id8">概述</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id9">交易流程</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id10">请求报文</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id11">响应报文</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#n2004">签约页面前天跳转-N2004</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id12">概述</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id13">交易流程</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id14">请求报文</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#p2005">快捷支付创建订单-P2005</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id15">概述</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id16">交易流程</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id17">请求报文</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id18">应答报文</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#n2007">支付结果异步回调-N2007</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#p2006">快捷支付确认-P2006</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id19">概述</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id20">交易流程</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id21">请求报文</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id22">应答报文</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#p2020">快捷支付查询-P2020</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id23">概述</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id24">交易流程</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id25">请求报文</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id26">应答报文</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../dzFile/index.html">对账文件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../end/index.html">附录</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">立收产品接口文档</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">立收产品接口文档</a> &raquo;</li>
+        
+      <li>快捷交易接口</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/kjpay/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>快捷交易接口<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<div class="section" id="id2">
+<h2>交易概览<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>立收产品包括以下交易类型</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 26%" />
+<col style="width: 56%" />
+<col style="width: 18%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>接口名称</p></td>
+<td><p>功能说明</p></td>
+<td><p>交易代码</p></td>
+</tr>
+<tr class="row-even"><td><p>快捷签约（前台）</p></td>
+<td><p>会员跳转银联页面输入相关要素完成，签
+约，签通过后，后台会收到异步回调签约
+的结果，签约成功后即可发起支付服务</p></td>
+<td><p>S2001</p></td>
+</tr>
+<tr class="row-odd"><td><p>签约状态查询</p></td>
+<td><p>查询S2001签约结果</p></td>
+<td><p>S2002</p></td>
+</tr>
+<tr class="row-even"><td><p>签约结果异步回调</p></td>
+<td><p>立收后台收到银联回调的签约结果后，回
+调合作机构签约结果</p></td>
+<td><p>N2003</p></td>
+</tr>
+<tr class="row-odd"><td><p>签约完成前台跳转</p></td>
+<td><p>会员签约完成后跳转到合作机构上送的前
+台跳转地址</p></td>
+<td><p>N2004</p></td>
+</tr>
+<tr class="row-even"><td><p>快捷支付创建订单</p></td>
+<td><p>用户上送相关签约信息（N2003/S2002）
+返回，支付服务</p></td>
+<td><p>P2005</p></td>
+</tr>
+<tr class="row-odd"><td><p>快捷支付确认</p></td>
+<td><p>上送验证码确认支付</p></td>
+<td><p>P2006</p></td>
+</tr>
+<tr class="row-even"><td><p>支付结果查询</p></td>
+<td><p>支付结果查询</p></td>
+<td><p>P2020</p></td>
+</tr>
+<tr class="row-odd"><td><p>支付结果异步回调</p></td>
+<td><p>支付结果异步回调给合作机构</p></td>
+<td><p>N2007</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="s2001">
+<h2>快捷签约（前台）-S2001<a class="headerlink" href="#s2001" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id3">
+<h3>概述<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
+<p>会员上送相关信息调用快捷签约接口，在返回的H5页面中完成签约操作。</p>
+</div>
+<div class="section" id="id4">
+<h3>交易流程<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li><p>用户发起签约服务，调用签约接口，返回H5链接；</p></li>
+<li><p>用户在页面输入相关信息完成签约；</p></li>
+<li><p>签约结果异步回调或者同步查询。</p></li>
+</ul>
+</div>
+<div class="section" id="id5">
+<h3>请求报文<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 15%" />
+<col style="width: 16%" />
+<col style="width: 15%" />
+<col style="width: 43%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>序号</p></td>
+<td><p>域名</p></td>
+<td><p>变量名</p></td>
+<td><p>出现要求</p></td>
+<td><p>备注</p></td>
+</tr>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>产品码</p></td>
+<td><p>prodCode</p></td>
+<td><p>M</p></td>
+<td><p>快捷产品代码</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>用户ID</p></td>
+<td><p>userId</p></td>
+<td><p>M</p></td>
+<td><p>立收用户ID</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>用户姓名</p></td>
+<td><p>userName</p></td>
+<td><p>M</p></td>
+<td><p>用户姓名</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>签约账号</p></td>
+<td><p>priAcctNo</p></td>
+<td><p>M</p></td>
+<td><p>签约账号</p></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p>预留手机号</p></td>
+<td><p>bankPhoneNo</p></td>
+<td><p>M</p></td>
+<td><p>支付卡预留手机号</p></td>
+</tr>
+<tr class="row-odd"><td><p>6</p></td>
+<td><p>前台跳转地址</p></td>
+<td><p>forwardURL</p></td>
+<td><p>M</p></td>
+<td><p>签约完成后跳转地址</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id6">
+<h3>应答报文<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 44%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>序号</p></td>
+<td><p>域名</p></td>
+<td><p>变量名</p></td>
+<td><p>出现要求</p></td>
+<td><p>备注</p></td>
+</tr>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>响应码</p></td>
+<td><p>respCode</p></td>
+<td><p>M</p></td>
+<td><p>应答码</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>应答信息</p></td>
+<td><p>respMsg</p></td>
+<td><p>M</p></td>
+<td><p>应答信息</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>h5-页面</p></td>
+<td><p>h5Conteng</p></td>
+<td><p>R</p></td>
+<td><p>成功时返回H5页面</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id7">
+<h3>签约结果异步回调<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 15%" />
+<col style="width: 16%" />
+<col style="width: 15%" />
+<col style="width: 44%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>序号</p></td>
+<td><p>域名</p></td>
+<td><p>变量名</p></td>
+<td><p>出现要求</p></td>
+<td><p>备注</p></td>
+</tr>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>响应码</p></td>
+<td><p>respCode</p></td>
+<td><p>M</p></td>
+<td><p>应答码</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>应答信息</p></td>
+<td><p>respMsg</p></td>
+<td><p>M</p></td>
+<td><p>应答信息</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>签约流水号</p></td>
+<td><p>origRequestNo</p></td>
+<td><p>R</p></td>
+<td><p>签约流水号</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>用户号</p></td>
+<td><p>userId</p></td>
+<td><p>R</p></td>
+<td><p>用户id</p></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p>签约卡号</p></td>
+<td><p>priAcctNo</p></td>
+<td><p>R</p></td>
+<td><p>签约卡号</p></td>
+</tr>
+<tr class="row-odd"><td><p>6</p></td>
+<td><p>签约状态</p></td>
+<td><p>tradeStatus</p></td>
+<td><p>R</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>7</p></td>
+<td><p>绑卡序号</p></td>
+<td><p>bindCardId</p></td>
+<td><p>R</p></td>
+<td><p>绑卡序号</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="s2002">
+<h2>签约查询-S2002<a class="headerlink" href="#s2002" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id8">
+<h3>概述<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h3>
+<p>查询S2001签约状态</p>
+</div>
+<div class="section" id="id9">
+<h3>交易流程<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li><p>合作机构发起交易状态查询交易；</p></li>
+<li><p>立收系统完成交易处理；</p></li>
+<li><p>查询后返回前端合作机构。</p></li>
+</ul>
+</div>
+<div class="section" id="id10">
+<h3>请求报文<a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 15%" />
+<col style="width: 16%" />
+<col style="width: 15%" />
+<col style="width: 43%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>序号</p></td>
+<td><p>域名</p></td>
+<td><p>变量名</p></td>
+<td><p>出现要求</p></td>
+<td><p>备注</p></td>
+</tr>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>签约流水号</p></td>
+<td><p>origRequestNo</p></td>
+<td><p>M</p></td>
+<td><p>签约流水号</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id11">
+<h3>响应报文<a class="headerlink" href="#id11" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 15%" />
+<col style="width: 16%" />
+<col style="width: 15%" />
+<col style="width: 43%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>序号</p></td>
+<td><p>域名</p></td>
+<td><p>变量名</p></td>
+<td><p>出现要求</p></td>
+<td><p>备注</p></td>
+</tr>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>响应码</p></td>
+<td><p>respCode</p></td>
+<td><p>M</p></td>
+<td><p>应答码</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>应答信息</p></td>
+<td><p>respMsg</p></td>
+<td><p>M</p></td>
+<td><p>应答信息</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>原交易应答码</p></td>
+<td><p>origRespCode</p></td>
+<td><p>R</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>原交易应答信息</p></td>
+<td><p>origRespMsg</p></td>
+<td><p>R</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p>签约流水号</p></td>
+<td><p>origRequestNo</p></td>
+<td><p>R</p></td>
+<td><p>签约流水号</p></td>
+</tr>
+<tr class="row-odd"><td><p>6</p></td>
+<td><p>用户号</p></td>
+<td><p>userId</p></td>
+<td><p>R</p></td>
+<td><p>用户id</p></td>
+</tr>
+<tr class="row-even"><td><p>7</p></td>
+<td><p>签约卡号</p></td>
+<td><p>priAcctNo</p></td>
+<td><p>R</p></td>
+<td><p>签约卡号</p></td>
+</tr>
+<tr class="row-odd"><td><p>8</p></td>
+<td><p>签约状态</p></td>
+<td><p>tradeStatus</p></td>
+<td><p>R</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>9</p></td>
+<td><p>绑卡序号</p></td>
+<td><p>bindCardId</p></td>
+<td><p>R</p></td>
+<td><p>绑卡序号</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="n2004">
+<h2>签约页面前天跳转-N2004<a class="headerlink" href="#n2004" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id12">
+<h3>概述<a class="headerlink" href="#id12" title="永久链接至标题">¶</a></h3>
+<p>打开银联全渠道页面签约完成后，跳转到上送跳转地址</p>
+</div>
+<div class="section" id="id13">
+<h3>交易流程<a class="headerlink" href="#id13" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li><p>签约完成后，用户点击：返回商户，跳转到上送前台地址；</p></li>
+<li><p>请求方式为GET请求，参数如下；</p></li>
+</ul>
+</div>
+<div class="section" id="id14">
+<h3>请求报文<a class="headerlink" href="#id14" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 15%" />
+<col style="width: 16%" />
+<col style="width: 15%" />
+<col style="width: 43%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>序号</p></td>
+<td><p>域名</p></td>
+<td><p>变量名</p></td>
+<td><p>出现要求</p></td>
+<td><p>备注</p></td>
+</tr>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>签约流水号</p></td>
+<td><p>orgTrace</p></td>
+<td><p>M</p></td>
+<td><p>签约流水号</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>签约状态</p></td>
+<td><p>activateStatus</p></td>
+<td><p>M</p></td>
+<td><p>1-签约成功</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>签约时间</p></td>
+<td><p>tsDate</p></td>
+<td><p>M</p></td>
+<td><p>YYYYMMDD</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>签约应答码</p></td>
+<td><p>finRetCode</p></td>
+<td><p>M</p></td>
+<td><p>00-表示成功</p></td>
+</tr>
+</tbody>
+</table>
+<p>样例:
+<a class="reference external" href="https://www.baidu.com/?orgTrace=ORG0000220200515150422onmn5i&amp;activateStatus=1&amp;tsDate=20200515&amp;finRetCode=00">https://www.baidu.com/?orgTrace=ORG0000220200515150422onmn5i&amp;activateStatus=1&amp;tsDate=20200515&amp;finRetCode=00</a></p>
+</div>
+</div>
+<div class="section" id="p2005">
+<h2>快捷支付创建订单-P2005<a class="headerlink" href="#p2005" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id15">
+<h3>概述<a class="headerlink" href="#id15" title="永久链接至标题">¶</a></h3>
+<p>快捷支付创建支付订单，上送绑定卡序列号、预留手机号完成支付下单操作流程。</p>
+</div>
+<div class="section" id="id16">
+<h3>交易流程<a class="headerlink" href="#id16" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li><p>合作机构快捷支付下单交易；</p></li>
+<li><p>返回订单信息和订单状态；</p></li>
+<li><p>渠道会下发用户验证码，在订单确认交易中上送短信验证码。</p></li>
+</ul>
+</div>
+<div class="section" id="id17">
+<h3>请求报文<a class="headerlink" href="#id17" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 15%" />
+<col style="width: 16%" />
+<col style="width: 15%" />
+<col style="width: 43%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>序号</p></td>
+<td><p>域名</p></td>
+<td><p>变量名</p></td>
+<td><p>出现要求</p></td>
+<td><p>备注</p></td>
+</tr>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>产品码</p></td>
+<td><p>prodCode</p></td>
+<td><p>M</p></td>
+<td><p>快捷产品代码</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>用户ID</p></td>
+<td><p>userId</p></td>
+<td><p>M</p></td>
+<td><p>立收用户ID</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>绑卡序号</p></td>
+<td><p>userName</p></td>
+<td><p>M</p></td>
+<td><p>用户姓名</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>金额</p></td>
+<td><p>amount</p></td>
+<td><p>M</p></td>
+<td><p>交易金额</p></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p>预留手机号</p></td>
+<td><p>bankPhoneNo</p></td>
+<td><p>M</p></td>
+<td><p>支付卡预留手机号</p></td>
+</tr>
+<tr class="row-odd"><td><p>6</p></td>
+<td><p>支付回调地址</p></td>
+<td><p>notifyURL</p></td>
+<td><p>M</p></td>
+<td><p>支付回调地址</p></td>
+</tr>
+<tr class="row-even"><td><p>7</p></td>
+<td><p>前台跳转地址</p></td>
+<td><p>forwardURL</p></td>
+<td><p>M</p></td>
+<td><p>签约完成后跳转地址</p></td>
+</tr>
+<tr class="row-odd"><td><p>8</p></td>
+<td><p>订单描述</p></td>
+<td><p>orderDesc</p></td>
+<td><p>M</p></td>
+<td><p>订单信息</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id18">
+<h3>应答报文<a class="headerlink" href="#id18" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 15%" />
+<col style="width: 16%" />
+<col style="width: 15%" />
+<col style="width: 44%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>序号</p></td>
+<td><p>域名</p></td>
+<td><p>变量名</p></td>
+<td><p>出现要求</p></td>
+<td><p>备注</p></td>
+</tr>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>响应码</p></td>
+<td><p>respCode</p></td>
+<td><p>M</p></td>
+<td><p>应答码</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>应答信息</p></td>
+<td><p>respMsg</p></td>
+<td><p>M</p></td>
+<td><p>应答信息</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>用户号</p></td>
+<td><p>userId</p></td>
+<td><p>R</p></td>
+<td><p>用户id</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>订单状态</p></td>
+<td><p>tradeStatus</p></td>
+<td><p>R</p></td>
+<td><p>订单状态</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="n2007">
+<h3>支付结果异步回调-N2007<a class="headerlink" href="#n2007" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 15%" />
+<col style="width: 16%" />
+<col style="width: 15%" />
+<col style="width: 43%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>序号</p></td>
+<td><p>域名</p></td>
+<td><p>变量名</p></td>
+<td><p>出现要求</p></td>
+<td><p>备注</p></td>
+</tr>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>响应码</p></td>
+<td><p>respCode</p></td>
+<td><p>M</p></td>
+<td><p>应答码</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>应答信息</p></td>
+<td><p>respMsg</p></td>
+<td><p>M</p></td>
+<td><p>应答信息</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>订单流水号</p></td>
+<td><p>origRequestNo</p></td>
+<td><p>R</p></td>
+<td><p>签约流水号</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>用户号</p></td>
+<td><p>userId</p></td>
+<td><p>R</p></td>
+<td><p>用户id</p></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p>支付金额</p></td>
+<td><p>amount</p></td>
+<td><p>R</p></td>
+<td><p>支付金额</p></td>
+</tr>
+<tr class="row-odd"><td><p>6</p></td>
+<td><p>支付状态</p></td>
+<td><p>tradeStatus</p></td>
+<td><p>R</p></td>
+<td><p>订单状态</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="p2006">
+<h2>快捷支付确认-P2006<a class="headerlink" href="#p2006" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id19">
+<h3>概述<a class="headerlink" href="#id19" title="永久链接至标题">¶</a></h3>
+<p>上送P2005原订单号，手机号，验证码发起确认。</p>
+</div>
+<div class="section" id="id20">
+<h3>交易流程<a class="headerlink" href="#id20" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li><p>合作机构快捷支付下单交易；</p></li>
+<li><p>返回订单信息和订单状态、</p></li>
+</ul>
+</div>
+<div class="section" id="id21">
+<h3>请求报文<a class="headerlink" href="#id21" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 15%" />
+<col style="width: 16%" />
+<col style="width: 15%" />
+<col style="width: 43%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>序号</p></td>
+<td><p>域名</p></td>
+<td><p>变量名</p></td>
+<td><p>出现要求</p></td>
+<td><p>备注</p></td>
+</tr>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>原订单流水号</p></td>
+<td><p>origRequestNo</p></td>
+<td><p>M</p></td>
+<td><p>支付流水号</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>原订单交易号</p></td>
+<td><p>origTradeNo</p></td>
+<td><p>M</p></td>
+<td><p>支付交易号</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>验证码</p></td>
+<td><p>smsCopde</p></td>
+<td><p>M</p></td>
+<td><p>用户姓名</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id22">
+<h3>应答报文<a class="headerlink" href="#id22" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 15%" />
+<col style="width: 16%" />
+<col style="width: 15%" />
+<col style="width: 43%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>序号</p></td>
+<td><p>域名</p></td>
+<td><p>变量名</p></td>
+<td><p>出现要求</p></td>
+<td><p>备注</p></td>
+</tr>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>响应码</p></td>
+<td><p>respCode</p></td>
+<td><p>M</p></td>
+<td><p>应答码</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>应答信息</p></td>
+<td><p>respMsg</p></td>
+<td><p>M</p></td>
+<td><p>应答信息</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>用户号</p></td>
+<td><p>userId</p></td>
+<td><p>R</p></td>
+<td><p>用户id</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>订单状态</p></td>
+<td><p>tradeStatus</p></td>
+<td><p>R</p></td>
+<td><p>订单状态</p></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p>支付金额</p></td>
+<td><p>amount</p></td>
+<td><p>R</p></td>
+<td><p>订单金额</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="p2020">
+<h2>快捷支付查询-P2020<a class="headerlink" href="#p2020" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id23">
+<h3>概述<a class="headerlink" href="#id23" title="永久链接至标题">¶</a></h3>
+<p>上送P2005原订单号，查询订单支付状态</p>
+</div>
+<div class="section" id="id24">
+<h3>交易流程<a class="headerlink" href="#id24" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li><p>合作机构快捷支付查询交易状态；</p></li>
+<li><p>返回订单信息和订单状态。</p></li>
+</ul>
+</div>
+<div class="section" id="id25">
+<h3>请求报文<a class="headerlink" href="#id25" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 15%" />
+<col style="width: 16%" />
+<col style="width: 15%" />
+<col style="width: 43%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>序号</p></td>
+<td><p>域名</p></td>
+<td><p>变量名</p></td>
+<td><p>出现要求</p></td>
+<td><p>备注</p></td>
+</tr>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>原订单流水号</p></td>
+<td><p>origRequestNo</p></td>
+<td><p>M</p></td>
+<td><p>支付流水号</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>原订单交易号</p></td>
+<td><p>origTradeNo</p></td>
+<td><p>C</p></td>
+<td><p>支付交易号</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id26">
+<h3>应答报文<a class="headerlink" href="#id26" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 15%" />
+<col style="width: 16%" />
+<col style="width: 15%" />
+<col style="width: 43%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>序号</p></td>
+<td><p>域名</p></td>
+<td><p>变量名</p></td>
+<td><p>出现要求</p></td>
+<td><p>备注</p></td>
+</tr>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>响应码</p></td>
+<td><p>respCode</p></td>
+<td><p>M</p></td>
+<td><p>应答码</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>应答信息</p></td>
+<td><p>respMsg</p></td>
+<td><p>M</p></td>
+<td><p>应答信息</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>原交易应答码</p></td>
+<td><p>origRespCode</p></td>
+<td><p>R</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>原交易应答信息</p></td>
+<td><p>origRespMsg</p></td>
+<td><p>R</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p>用户号</p></td>
+<td><p>userId</p></td>
+<td><p>R</p></td>
+<td><p>用户id</p></td>
+</tr>
+<tr class="row-odd"><td><p>6</p></td>
+<td><p>订单状态</p></td>
+<td><p>tradeStatus</p></td>
+<td><p>R</p></td>
+<td><p>订单状态</p></td>
+</tr>
+<tr class="row-even"><td><p>7</p></td>
+<td><p>支付金额</p></td>
+<td><p>amount</p></td>
+<td><p>R</p></td>
+<td><p>订单金额</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../dzFile/index.html" class="btn btn-neutral float-right" title="对账文件" accesskey="n" rel="next">下一篇</a>
+      
+      
+        <a href="../users/index.html" class="btn btn-neutral" title="会员管理接口" accesskey="p" rel="prev">上一篇</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, 立收.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/unitedstack/sphinx_rtd_theme">theme</a> provided by <a href="https://github.com/unitedstack">UnitedStack</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'V1.0',
+            LANGUAGE:'zh_CN',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/language_data.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
