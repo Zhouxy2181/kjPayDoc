@@ -17,41 +17,39 @@
   
 
   
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
-  
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/language_data.js"></script>
-        <script src="../_static/translations.js"></script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
+  
+  
     
 
   
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
     <link rel="next" title="会员管理接口" href="../users/index.html" />
     <link rel="prev" title="技术方案" href="../guide/index.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
+
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
+        <div class="wy-side-nav-search">
           
 
           
-            <a href="../index.html" class="icon icon-home"> 立收产品接口文档
+            <a href="../index.html"> 立收产品接口文档
           
 
           
@@ -65,7 +63,7 @@
           
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="搜索" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -140,7 +138,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../index.html">Docs</a> &raquo;</li>
+      <li><a href="../index.html">立收产品接口文档</a> &raquo;</li>
         
       <li>报文字段说明</li>
     
@@ -754,12 +752,10 @@
 <td><p>产品费率信息</p></td>
 <td><p>prodFeeInfo</p></td>
 <td><p>ANS1..2048</p></td>
-<td><p>json数组详见备注</p></td>
+<td><p>该域为JSON数组对象，格式见下表</p></td>
 </tr>
 </tbody>
 </table>
-<p>注：
-产品费率信息（prodFeeInfo）：该域为JSON数组对象，其中每项费率格式如下</p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 10%" />
@@ -825,15 +821,12 @@
 <span class="p">{</span><span class="nt">&quot;prodCode&quot;</span><span class="p">:</span><span class="s2">&quot;P10&quot;</span><span class="p">,</span><span class="nt">&quot;feeID&quot;</span><span class="p">:</span><span class="s2">&quot;F03&quot;</span><span class="p">,</span><span class="nt">&quot;feeMode&quot;</span><span class="p">:</span><span class="s2">&quot;02&quot;</span><span class="p">,</span><span class="nt">&quot;feeFixed&quot;</span><span class="p">:</span><span class="s2">&quot;3&quot;</span><span class="p">}]</span>
 </pre></div>
 </div>
-<dl class="simple">
-<dt>注:</dt><dd><ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">产品:P10</span>&#160; <span class="pre">费率代码:F01</span>&#160; <span class="pre">费率:</span> <span class="pre">4.25%</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">产品:P10</span>&#160; <span class="pre">费率代码:F02</span>&#160; <span class="pre">费率:</span> <span class="pre">3.25%</span> <span class="pre">保底1元</span> <span class="pre">封顶5元</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">产品:P10</span> <span class="pre">费率代码:F03</span>&#160; <span class="pre">固定:3元</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">产品综合计费等于三个费率代码分别用本金计算手续费后累加，即为产品手续费。</span></code></p></li>
+<ul class="simple">
+<li><p>产品:P10  费率代码:F01  费率: 4.25%</p></li>
+<li><p>产品:P10  费率代码:F02  费率: 3.25% 保底1元 封顶5元</p></li>
+<li><p>产品:P10 费率代码:F03  固定:3元</p></li>
+<li><p>产品综合计费等于三个费率代码分别用本金计算手续费后累加，即为产品手续费。</p></li>
 </ul>
-</dd>
-</dl>
 </div>
 </div>
 
@@ -845,10 +838,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../users/index.html" class="btn btn-neutral float-right" title="会员管理接口" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../users/index.html" class="btn btn-neutral float-right" title="会员管理接口" accesskey="n" rel="next">下一篇</a>
       
       
-        <a href="../guide/index.html" class="btn btn-neutral float-left" title="技术方案" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../guide/index.html" class="btn btn-neutral" title="技术方案" accesskey="p" rel="prev">上一篇</a>
       
     </div>
   
@@ -857,11 +850,11 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2020, 立收
+        &copy; Copyright 2020, 立收.
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/unitedstack/sphinx_rtd_theme">theme</a> provided by <a href="https://github.com/unitedstack">UnitedStack</a>. 
 
 </footer>
 
@@ -874,16 +867,37 @@
   
 
 
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'V1.0',
+            LANGUAGE:'zh_CN',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/language_data.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>
