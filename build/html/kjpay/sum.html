@@ -1,0 +1,272 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>交易概览 &mdash; 立收产品接口文档 V1.0 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="S2001 快捷签约（前台)" href="s2001.html" />
+    <link rel="prev" title="快捷交易接口" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> 立收产品接口文档
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../chapter1/index.html">版本更新记录</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapter2/index.html">接入指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapter3/index.html">报文字段说明</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user/index.html">会员管理接口</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">快捷交易接口</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">交易概览</a></li>
+<li class="toctree-l2"><a class="reference internal" href="s2001.html">S2001 快捷签约（前台)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="s2002.html">S2002 签约查询</a></li>
+<li class="toctree-l2"><a class="reference internal" href="n2004.html">N2004 签约页面前台跳转</a></li>
+<li class="toctree-l2"><a class="reference internal" href="p2005.html">P2005 快捷支付创建订单</a></li>
+<li class="toctree-l2"><a class="reference internal" href="p2006.html">P2006 快捷支付确认</a></li>
+<li class="toctree-l2"><a class="reference internal" href="p2020.html">P2020 快捷支付查询</a></li>
+<li class="toctree-l2"><a class="reference internal" href="n2007.html">N2007 支付结果异步回调</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../dzfile/index.html">对账文件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../end/index.html">附录</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">立收产品接口文档</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">快捷交易接口</a> &raquo;</li>
+        
+      <li>交易概览</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/kjpay/sum.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>交易概览<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<p>立收产品包括以下交易类型</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 26%" />
+<col style="width: 56%" />
+<col style="width: 18%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>接口名称</p></td>
+<td><p>功能说明</p></td>
+<td><p>交易代码</p></td>
+</tr>
+<tr class="row-even"><td><p>快捷签约（前台）</p></td>
+<td><p>会员跳转银联页面输入相关要素完成，签
+约，签通过后，后台会收到异步回调签约
+的结果，签约成功后即可发起支付服务</p></td>
+<td><p>S2001</p></td>
+</tr>
+<tr class="row-odd"><td><p>签约状态查询</p></td>
+<td><p>查询S2001签约结果</p></td>
+<td><p>S2002</p></td>
+</tr>
+<tr class="row-even"><td><p>签约结果异步回调</p></td>
+<td><p>立收后台收到银联回调的签约结果后，回
+调合作机构签约结果</p></td>
+<td><p>N2003</p></td>
+</tr>
+<tr class="row-odd"><td><p>签约完成前台跳转</p></td>
+<td><p>会员签约完成后跳转到合作机构上送的前
+台跳转地址</p></td>
+<td><p>N2004</p></td>
+</tr>
+<tr class="row-even"><td><p>快捷支付创建订单</p></td>
+<td><p>用户上送相关签约信息（N2003/S2002）
+返回，支付服务</p></td>
+<td><p>P2005</p></td>
+</tr>
+<tr class="row-odd"><td><p>快捷支付确认</p></td>
+<td><p>上送验证码确认支付</p></td>
+<td><p>P2006</p></td>
+</tr>
+<tr class="row-even"><td><p>支付结果查询</p></td>
+<td><p>支付结果查询</p></td>
+<td><p>P2020</p></td>
+</tr>
+<tr class="row-odd"><td><p>支付结果异步回调</p></td>
+<td><p>支付结果异步回调给合作机构</p></td>
+<td><p>N2007</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="s2001.html" class="btn btn-neutral float-right" title="S2001 快捷签约（前台)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="快捷交易接口" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, 立收
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

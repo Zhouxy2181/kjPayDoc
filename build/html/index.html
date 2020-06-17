@@ -36,7 +36,7 @@
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="genindex.html" />
     <link rel="search" title="搜索" href="search.html" />
-    <link rel="next" title="开发说明" href="introduce/index.html" /> 
+    <link rel="next" title="版本更新记录" href="chapter1/index.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -81,12 +81,12 @@
             
             
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="introduce/index.html">开发说明</a></li>
-<li class="toctree-l1"><a class="reference internal" href="guide/index.html">技术方案</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fields/index.html">报文字段说明</a></li>
-<li class="toctree-l1"><a class="reference internal" href="users/index.html">会员管理接口</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter1/index.html">版本更新记录</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter2/index.html">接入指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter3/index.html">报文字段说明</a></li>
+<li class="toctree-l1"><a class="reference internal" href="user/index.html">会员管理接口</a></li>
 <li class="toctree-l1"><a class="reference internal" href="kjpay/index.html">快捷交易接口</a></li>
-<li class="toctree-l1"><a class="reference internal" href="dzFile/index.html">对账文件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dzfile/index.html">对账文件</a></li>
 <li class="toctree-l1"><a class="reference internal" href="end/index.html">附录</a></li>
 </ul>
 
@@ -156,141 +156,144 @@
 <h1>立收产品接口规范<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="introduce/index.html">开发说明</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="introduce/index.html#id2">版本</a></li>
-<li class="toctree-l2"><a class="reference internal" href="introduce/index.html#id3">概述</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter1/index.html">版本更新记录</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter2/index.html">接入指南</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="chapter2/index.html#id2">接口说明</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="chapter2/index.html#id3">会员管理</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter2/index.html#id4">快捷支付</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="guide/index.html">技术方案</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="guide/index.html#id2">通讯方式</a></li>
-<li class="toctree-l2"><a class="reference internal" href="guide/index.html#id3">安全要求</a></li>
-<li class="toctree-l2"><a class="reference internal" href="guide/index.html#id4">报文的签名机制</a></li>
-<li class="toctree-l2"><a class="reference internal" href="guide/index.html#id5">报文的验签机制</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter2/index.html#id5">通讯方式</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter2/index.html#id6">编码格式</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter2/index.html#id7">加密方式</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="chapter2/index.html#id8">业务字段加密</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter2/index.html#id10">报文签名与验签</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="fields/index.html">报文字段说明</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="fields/index.html#id2">符号约定</a></li>
-<li class="toctree-l2"><a class="reference internal" href="fields/index.html#id3">字段长度的计算</a></li>
-<li class="toctree-l2"><a class="reference internal" href="fields/index.html#id4">字段类型定义</a></li>
-<li class="toctree-l2"><a class="reference internal" href="fields/index.html#id5">通信请求字段</a></li>
-<li class="toctree-l2"><a class="reference internal" href="fields/index.html#id6">通信响应字段</a></li>
-<li class="toctree-l2"><a class="reference internal" href="fields/index.html#id7">业务数据字段</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="users/index.html">会员管理接口</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="users/index.html#id2">接口概览</a></li>
-<li class="toctree-l2"><a class="reference internal" href="users/index.html#u1001">发送短信验证码-U1001</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="users/index.html#id3">概述</a></li>
-<li class="toctree-l3"><a class="reference internal" href="users/index.html#id4">交易流程</a></li>
-<li class="toctree-l3"><a class="reference internal" href="users/index.html#id5">请求报文</a></li>
-<li class="toctree-l3"><a class="reference internal" href="users/index.html#id6">应答报文</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter3/index.html">报文字段说明</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="chapter3/index.html#id2">符号约定</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter3/index.html#id3">字段长度的计算</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter3/index.html#id4">字段类型定义</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter3/index.html#id5">通信请求字段</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter3/index.html#id6">通信响应字段</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter3/index.html#id7">业务数据字段</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="users/index.html#u1002">短信验证码验证-U1002</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="users/index.html#id7">概述</a></li>
-<li class="toctree-l3"><a class="reference internal" href="users/index.html#id8">交易流程</a></li>
-<li class="toctree-l3"><a class="reference internal" href="users/index.html#id9">请求报文</a></li>
-<li class="toctree-l3"><a class="reference internal" href="users/index.html#id10">应答报文</a></li>
+<li class="toctree-l1"><a class="reference internal" href="user/index.html">会员管理接口</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="user/sum.html">接口概览</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user/u1001.html">U1001 发送短信验证码</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="user/u1001.html#id1">功能说明</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user/u1001.html#id2">请求报文</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user/u1001.html#id3">应答报文</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="users/index.html#u1003">会员资料上传-U1003</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="users/index.html#id11">概述</a></li>
-<li class="toctree-l3"><a class="reference internal" href="users/index.html#id12">交易流程</a></li>
-<li class="toctree-l3"><a class="reference internal" href="users/index.html#id13">请求报文</a></li>
-<li class="toctree-l3"><a class="reference internal" href="users/index.html#id14">应答报文</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user/u1002.html">U1002 短信验证码验证</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="user/u1002.html#id1">概述</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user/u1002.html#id2">交易流程</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user/u1002.html#id3">请求报文</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user/u1002.html#id4">应答报文</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="users/index.html#u1011">会员注册-U1011</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="users/index.html#id15">概述</a></li>
-<li class="toctree-l3"><a class="reference internal" href="users/index.html#id16">交易流程</a></li>
-<li class="toctree-l3"><a class="reference internal" href="users/index.html#id17">请求报文</a></li>
-<li class="toctree-l3"><a class="reference internal" href="users/index.html#id18">应答报文</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user/u1003.html">U1003 会员资料上传</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="user/u1003.html#id1">概述</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user/u1003.html#id2">交易流程</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user/u1003.html#id3">请求报文</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user/u1003.html#id4">应答报文</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="users/index.html#u1012">会员注册确认-U1012</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="users/index.html#id19">概述</a></li>
-<li class="toctree-l3"><a class="reference internal" href="users/index.html#id20">交易流程</a></li>
-<li class="toctree-l3"><a class="reference internal" href="users/index.html#id21">请求报文</a></li>
-<li class="toctree-l3"><a class="reference internal" href="users/index.html#id22">应答报文</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user/u1011.html">U1011 会员注册</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="user/u1011.html#id1">概述</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user/u1011.html#id2">交易流程</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user/u1011.html#id3">请求报文</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user/u1011.html#id4">应答报文</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="users/index.html#u1013">会员结算卡变更-U1013</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="users/index.html#id23">概述</a></li>
-<li class="toctree-l3"><a class="reference internal" href="users/index.html#id24">交易流程</a></li>
-<li class="toctree-l3"><a class="reference internal" href="users/index.html#id25">请求报文</a></li>
-<li class="toctree-l3"><a class="reference internal" href="users/index.html#id26">应答报文</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user/u1012.html">U1012 会员注册确认</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="user/u1012.html#id1">概述</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user/u1012.html#id2">交易流程</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user/u1012.html#id3">请求报文</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user/u1012.html#id4">应答报文</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="users/index.html#u1014">会员费率变更-U1014</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="users/index.html#id27">概述</a></li>
-<li class="toctree-l3"><a class="reference internal" href="users/index.html#id28">交易流程</a></li>
-<li class="toctree-l3"><a class="reference internal" href="users/index.html#id29">请求报文</a></li>
-<li class="toctree-l3"><a class="reference internal" href="users/index.html#id30">应答报文</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user/u1013.html">U1013 会员结算卡变更</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="user/u1013.html#id1">概述</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user/u1013.html#id2">交易流程</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user/u1013.html#id3">请求报文</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user/u1013.html#id4">应答报文</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="users/index.html#u1015">会员查询-U1015</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="users/index.html#id31">概述</a></li>
-<li class="toctree-l3"><a class="reference internal" href="users/index.html#id32">交易流程</a></li>
-<li class="toctree-l3"><a class="reference internal" href="users/index.html#id33">请求报文</a></li>
-<li class="toctree-l3"><a class="reference internal" href="users/index.html#id34">应答报文</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user/u1014.html">U1014 会员费率变更</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="user/u1014.html#id1">概述</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user/u1014.html#id2">交易流程</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user/u1014.html#id3">请求报文</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user/u1014.html#id4">应答报文</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="users/index.html#id35">入网结果异步回调</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user/u1015.html">U1015 会员查询</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="user/u1015.html#id1">概述</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user/u1015.html#id2">交易流程</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user/u1015.html#id3">请求报文</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user/u1015.html#id4">应答报文</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="user/noti.html">入网结果异步回调</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="kjpay/index.html">快捷交易接口</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="kjpay/index.html#id2">交易概览</a></li>
-<li class="toctree-l2"><a class="reference internal" href="kjpay/index.html#s2001">快捷签约（前台）-S2001</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="kjpay/index.html#id3">概述</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kjpay/index.html#id4">交易流程</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kjpay/index.html#id5">请求报文</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kjpay/index.html#id6">应答报文</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kjpay/index.html#id7">签约结果异步回调</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kjpay/sum.html">交易概览</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kjpay/s2001.html">S2001 快捷签约（前台)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kjpay/s2001.html#id1">概述</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kjpay/s2001.html#id2">交易流程</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kjpay/s2001.html#id3">请求报文</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kjpay/s2001.html#id4">应答报文</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kjpay/s2001.html#id5">签约结果异步回调</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="kjpay/index.html#s2002">签约查询-S2002</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="kjpay/index.html#id8">概述</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kjpay/index.html#id9">交易流程</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kjpay/index.html#id10">请求报文</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kjpay/index.html#id11">响应报文</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kjpay/s2002.html">S2002 签约查询</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kjpay/s2002.html#id1">概述</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kjpay/s2002.html#id2">交易流程</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kjpay/s2002.html#id3">请求报文</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kjpay/s2002.html#id4">响应报文</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="kjpay/index.html#n2004">签约页面前天跳转-N2004</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="kjpay/index.html#id12">概述</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kjpay/index.html#id13">交易流程</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kjpay/index.html#id14">请求报文</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kjpay/n2004.html">N2004 签约页面前台跳转</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kjpay/n2004.html#id1">概述</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kjpay/n2004.html#id2">交易流程</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kjpay/n2004.html#id3">请求报文</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="kjpay/index.html#p2005">快捷支付创建订单-P2005</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="kjpay/index.html#id15">概述</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kjpay/index.html#id16">交易流程</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kjpay/index.html#id17">请求报文</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kjpay/index.html#id18">应答报文</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kjpay/index.html#n2007">支付结果异步回调-N2007</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kjpay/p2005.html">P2005 快捷支付创建订单</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kjpay/p2005.html#id1">概述</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kjpay/p2005.html#id2">交易流程</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kjpay/p2005.html#id3">请求报文</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kjpay/p2005.html#id4">应答报文</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="kjpay/index.html#p2006">快捷支付确认-P2006</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="kjpay/index.html#id19">概述</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kjpay/index.html#id20">交易流程</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kjpay/index.html#id21">请求报文</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kjpay/index.html#id22">应答报文</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kjpay/p2006.html">P2006 快捷支付确认</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kjpay/p2006.html#id1">概述</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kjpay/p2006.html#id2">交易流程</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kjpay/p2006.html#id3">请求报文</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kjpay/p2006.html#id4">应答报文</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="kjpay/index.html#p2020">快捷支付查询-P2020</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="kjpay/index.html#id23">概述</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kjpay/index.html#id24">交易流程</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kjpay/index.html#id25">请求报文</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kjpay/index.html#id26">应答报文</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kjpay/p2020.html">P2020 快捷支付查询</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kjpay/p2020.html#id1">概述</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kjpay/p2020.html#id2">交易流程</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kjpay/p2020.html#id3">请求报文</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kjpay/p2020.html#id4">应答报文</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="kjpay/n2007.html">N2007 支付结果异步回调</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="dzFile/index.html">对账文件</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="dzFile/index.html#p2021">对账文件-P2021</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="dzFile/index.html#id2">概述</a></li>
-<li class="toctree-l3"><a class="reference internal" href="dzFile/index.html#id3">交易流程</a></li>
-<li class="toctree-l3"><a class="reference internal" href="dzFile/index.html#id4">请求报文</a></li>
-<li class="toctree-l3"><a class="reference internal" href="dzFile/index.html#id5">应答报文</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dzfile/index.html">对账文件</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dzfile/index.html#p2021">对账文件-P2021</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="dzfile/index.html#id2">概述</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dzfile/index.html#id3">交易流程</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dzfile/index.html#id4">请求报文</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dzfile/index.html#id5">应答报文</a></li>
 </ul>
 </li>
 </ul>
@@ -311,7 +314,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="introduce/index.html" class="btn btn-neutral float-right" title="开发说明" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="chapter1/index.html" class="btn btn-neutral float-right" title="版本更新记录" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
     </div>

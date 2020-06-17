@@ -1,0 +1,324 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>接入指南 &mdash; 立收产品接口文档 V1.0 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="报文字段说明" href="../chapter3/index.html" />
+    <link rel="prev" title="版本更新记录" href="../chapter1/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> 立收产品接口文档
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../chapter1/index.html">版本更新记录</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">接入指南</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">接口说明</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id3">会员管理</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">快捷支付</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id5">通讯方式</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id6">编码格式</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id7">加密方式</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id8">业务字段加密</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id10">报文签名与验签</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../chapter3/index.html">报文字段说明</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user/index.html">会员管理接口</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kjpay/index.html">快捷交易接口</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dzfile/index.html">对账文件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../end/index.html">附录</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">立收产品接口文档</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>接入指南</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/chapter2/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>接入指南<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<p>立收产品采用了 HTTPS 协议提供各类接口，并且所有接口都是统一请求地址，方便合作机构简单、快速接入。</p>
+<div class="section" id="id2">
+<h2>接口说明<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>列举了常用接口，可根据实际业务需要增删其中的接口，自由组合。详细请看左侧分类菜单中的接口名称和详细介绍。</p>
+<div class="section" id="id3">
+<h3>会员管理<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 27%" />
+<col style="width: 69%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>序号</p></td>
+<td><p>会员管理接口调用顺序</p></td>
+<td><p>备注说明</p></td>
+</tr>
+<tr class="row-even"><td><p>1</p></td>
+<td><p><a class="reference external" href="../user/index.html#u1003">U1003会员资料上传</a></p></td>
+<td><p>上传会员影像信息得到文件ID备用</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p><a class="reference external" href="../user/index.html#u1011">U1011会员注册</a></p></td>
+<td><p>注册得到userId备用（注：该接口需上送U1003返回文件ID）</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p><a class="reference external" href="../user/index.html#u1001">U1001发送短信验证</a></p></td>
+<td><p>返回验证码备用</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p><a class="reference external" href="../user/index.html#u1002">U1002短信验证码验证</a></p></td>
+<td><p>校验U1001发送验证码（注：需上送U1001请求流水号）</p></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p><a class="reference external" href="../user/index.html#u1012">U1012会员注册确认</a></p></td>
+<td><p>需上送U1011请求流水号与userId以及U1001验证码</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id4">
+<h3>快捷支付<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 26%" />
+<col style="width: 69%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>序号</p></td>
+<td><p>快捷支付接口调用顺序</p></td>
+<td><p>备注说明</p></td>
+</tr>
+<tr class="row-even"><td><p>1</p></td>
+<td><p><a class="reference external" href="../kjpay/index.html#s2001">S2001快捷签约</a></p></td>
+<td><p>有页面，返回H5链接（注：需上送userId）</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p><a class="reference external" href="../kjpay/index.html#n2004">N2004签约页面</a></p></td>
+<td><p>需上送S2001签约请求流水号</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p><a class="reference external" href="../kjpay/index.html#p2005">P2005创建订单</a></p></td>
+<td><p>返回签约流水号备用（注：需上送userId）</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p><a class="reference external" href="../kjpay/index/html#p2006">P2006支付确认</a></p></td>
+<td><p>有短信验证码（注：需上送P2005返回订单流水号和交易流水号）</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="id5">
+<h2>通讯方式<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li><p>采用 HTTPS 协议，报文提交方式为POST，采用Key=Value格式。</p></li>
+<li><p>接口的请求和返回均需要签名与验证。</p></li>
+<li><p>前台跳转类为GET 参数机制回传给合作机构。</p></li>
+</ul>
+</div>
+<div class="section" id="id6">
+<h2>编码格式<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
+<p>UTF-8</p>
+</div>
+<div class="section" id="id7">
+<h2>加密方式<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id8">
+<h3>业务字段加密<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="../chapter3/index.html#id7">业务数据</a> 对应字段JSON序列化以后，AES加密BASE64处理后存入报文的bizData字段。</p></li>
+</ul>
+</div>
+<div class="section" id="id10">
+<h3>报文签名与验签<a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="../chapter3/index.html#id5">通信请求字段</a> 中出现签名域（signature之外）所有非空值数据元采用key=value的形式按照名称的ASCII码从小到大进行排序，如果名称首字母相同，则比较第二个字母，以此类推，然后以&amp;作为拼接符拼接成待签名串，对待签名串使用SHA256WithRSA方式计算签名，签名结果BASE64编码后，存入到 signature字段。</p></li>
+<li><p><a class="reference external" href="../chapter3/index.html#id6">通信响应字段</a> 中出现签名域（signature之外）所有字段采用Key=Value的形式按照名称排序，然后以&amp;作为拼接符拼接成待签名串，对待签名串使用SHA-256算法做摘要，再使用入网时立收平台提供的验签公钥对摘要和报文中的签名信息做签名验证操作。</p></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../chapter3/index.html" class="btn btn-neutral float-right" title="报文字段说明" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../chapter1/index.html" class="btn btn-neutral float-left" title="版本更新记录" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, 立收
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
