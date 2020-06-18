@@ -19,6 +19,8 @@
 
    kjpay/index
 
+   nocard/index
+
    dzfile/index
 
    end/index
