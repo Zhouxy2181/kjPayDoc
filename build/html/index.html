@@ -85,8 +85,9 @@
 <li class="toctree-l1"><a class="reference internal" href="chapter2/index.html">接入指南</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chapter3/index.html">参数规范</a></li>
 <li class="toctree-l1"><a class="reference internal" href="user/index.html">会员管理接口</a></li>
-<li class="toctree-l1"><a class="reference internal" href="kjpay/index.html">快捷交易接口</a></li>
-<li class="toctree-l1"><a class="reference internal" href="nocard/index.html">无卡交易接口</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kjpay/index.html">全渠道交易接口</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nocard/index.html">新无卡交易接口</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scan/index.html">扫码交易接口</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dzfile/index.html">对账文件</a></li>
 <li class="toctree-l1"><a class="reference internal" href="end/index.html">附录</a></li>
 </ul>
@@ -232,10 +233,10 @@
 <li class="toctree-l3"><a class="reference internal" href="user/u1015.html#id3">应答报文</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="user/noti.html">入网结果异步回调</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user/n1016.html">N1016 入网结果异步回调</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="kjpay/index.html">快捷交易接口</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="kjpay/index.html">全渠道交易接口</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="kjpay/sum.html">交易概览</a></li>
 <li class="toctree-l2"><a class="reference internal" href="kjpay/s2001.html">S2001 快捷签约（前台)</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="kjpay/s2001.html#id1">功能说明</a></li>
@@ -250,11 +251,6 @@
 <li class="toctree-l3"><a class="reference internal" href="kjpay/s2002.html#id3">响应报文</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="kjpay/n2004.html">N2004 签约页面前台跳转</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="kjpay/n2004.html#id1">功能说明</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kjpay/n2004.html#id2">请求报文</a></li>
-</ul>
-</li>
 <li class="toctree-l2"><a class="reference internal" href="kjpay/p2005.html">P2005 快捷支付创建订单</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="kjpay/p2005.html#id1">功能说明</a></li>
 <li class="toctree-l3"><a class="reference internal" href="kjpay/p2005.html#id2">请求报文</a></li>
@@ -267,16 +263,22 @@
 <li class="toctree-l3"><a class="reference internal" href="kjpay/p2006.html#id3">应答报文</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="kjpay/p2020.html">P2020 快捷支付查询</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kjpay/p2020.html">P2020 支付查询</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="kjpay/p2020.html#id1">功能说明</a></li>
 <li class="toctree-l3"><a class="reference internal" href="kjpay/p2020.html#id2">请求报文</a></li>
 <li class="toctree-l3"><a class="reference internal" href="kjpay/p2020.html#id3">应答报文</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="kjpay/n2003.html">N2003 签约结果异步回调</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kjpay/n2004.html">N2004 签约页面前台跳转</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kjpay/n2004.html#id1">功能说明</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kjpay/n2004.html#id2">请求报文</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="kjpay/n2007.html">N2007 支付结果异步回调</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="nocard/index.html">无卡交易接口</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="nocard/index.html">新无卡交易接口</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="nocard/sum.html">交易概览</a></li>
 <li class="toctree-l2"><a class="reference internal" href="nocard/c3001.html">C3001 协议支付-账户认证</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="nocard/c3001.html#id1">功能说明</a></li>
@@ -296,26 +298,31 @@
 <li class="toctree-l3"><a class="reference internal" href="nocard/c3003.html#id3">响应报文</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="nocard/c3030.html">C3030 协议支付-交易查询</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="nocard/c3030.html#id1">功能说明</a></li>
-<li class="toctree-l3"><a class="reference internal" href="nocard/c3030.html#id2">请求报文</a></li>
-<li class="toctree-l3"><a class="reference internal" href="nocard/c3030.html#id3">请求报文</a></li>
-<li class="toctree-l3"><a class="reference internal" href="nocard/c3030.html#id4">响应报文</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nocard/p2020.html">P2020 支付查询</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nocard/p2020.html#id1">功能说明</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nocard/p2020.html#id2">请求报文</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nocard/p2020.html#id3">请求报文</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nocard/p2020.html#id4">响应报文</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="nocard/c3004.html">C3004 支付宝/银联主扫支付</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="nocard/c3004.html#id1">功能说明</a></li>
-<li class="toctree-l3"><a class="reference internal" href="nocard/c3004.html#id2">请求报文</a></li>
-<li class="toctree-l3"><a class="reference internal" href="nocard/c3004.html#id3">响应报文</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nocard/n3004.html">N3004 支付结果异步回调</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="nocard/c3031.html">C3005 支付宝/银联支付查询</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="nocard/c3031.html#id1">功能说明</a></li>
-<li class="toctree-l3"><a class="reference internal" href="nocard/c3031.html#id2">请求报文</a></li>
-<li class="toctree-l3"><a class="reference internal" href="nocard/c3031.html#id3">响应报文</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scan/index.html">扫码交易接口</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="scan/sum.html">交易概览</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scan/d4001.html">D4001 支付宝/银联主扫支付</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="scan/d4001.html#id1">功能说明</a></li>
+<li class="toctree-l3"><a class="reference internal" href="scan/d4001.html#id2">请求报文</a></li>
+<li class="toctree-l3"><a class="reference internal" href="scan/d4001.html#id3">响应报文</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="nocard/n3005.html">N3005 支付结果异步回调</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scan/p2020.html">P2020 支付查询</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="scan/p2020.html#id1">功能说明</a></li>
+<li class="toctree-l3"><a class="reference internal" href="scan/p2020.html#id2">请求报文</a></li>
+<li class="toctree-l3"><a class="reference internal" href="scan/p2020.html#id3">响应报文</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="scan/n4002.html">N4002 支付结果异步回调</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="dzfile/index.html">对账文件</a><ul>

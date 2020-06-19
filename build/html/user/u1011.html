@@ -100,11 +100,12 @@
 <li class="toctree-l2"><a class="reference internal" href="u1013.html">U1013 会员结算卡变更</a></li>
 <li class="toctree-l2"><a class="reference internal" href="u1014.html">U1014 会员费率变更</a></li>
 <li class="toctree-l2"><a class="reference internal" href="u1015.html">U1015 会员查询</a></li>
-<li class="toctree-l2"><a class="reference internal" href="noti.html">入网结果异步回调</a></li>
+<li class="toctree-l2"><a class="reference internal" href="n1016.html">N1016 入网结果异步回调</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../kjpay/index.html">快捷交易接口</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../nocard/index.html">无卡交易接口</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kjpay/index.html">全渠道交易接口</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nocard/index.html">新无卡交易接口</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scan/index.html">扫码交易接口</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../dzfile/index.html">对账文件</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../end/index.html">附录</a></li>
 </ul>
@@ -317,6 +318,78 @@
 </tr>
 </tbody>
 </table>
+<p>产品费率信息（prodFeeInfo）</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 44%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>序号</p></td>
+<td><p>子域名</p></td>
+<td><p>标  识</p></td>
+<td><p>子域格式</p></td>
+<td><p>说  明</p></td>
+</tr>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>产品代码</p></td>
+<td><p>prodCode</p></td>
+<td><p>N4</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>费率代码</p></td>
+<td><p>feeID</p></td>
+<td><p>ANS5</p></td>
+<td><p>费率代码</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>费率模式</p></td>
+<td><p>feeMode</p></td>
+<td><p>N2</p></td>
+<td><p>01-比例     02-固定</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>费率</p></td>
+<td><p>feeRate</p></td>
+<td><p>AN8</p></td>
+<td><p>0.02345  =  2.345%</p></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p>保底</p></td>
+<td><p>feeMin</p></td>
+<td><p>AN5</p></td>
+<td><p>1.12 = 1.12元</p></td>
+</tr>
+<tr class="row-odd"><td><p>6</p></td>
+<td><p>封顶</p></td>
+<td><p>feeMax</p></td>
+<td><p>AN5</p></td>
+<td><p>1.12 = 1.12元</p></td>
+</tr>
+<tr class="row-even"><td><p>7</p></td>
+<td><p>固定</p></td>
+<td><p>feeFixed</p></td>
+<td><p>AN5</p></td>
+<td><p>1.12 = 1.12元</p></td>
+</tr>
+</tbody>
+</table>
+<p>示例如下</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">[{</span><span class="nt">&quot;prodCode&quot;</span><span class="p">:</span><span class="s2">&quot;P10&quot;</span><span class="p">,</span><span class="nt">&quot;feeID&quot;</span><span class="p">:</span><span class="s2">&quot;F01&quot;</span><span class="p">,</span><span class="nt">&quot;feeMode&quot;</span><span class="p">:</span><span class="s2">&quot;01&quot;</span><span class="p">,</span><span class="nt">&quot;feeRate&quot;</span><span class="p">:</span><span class="s2">&quot;0.0425&quot;</span><span class="p">},</span>
+ <span class="p">{</span><span class="nt">&quot;prodCode&quot;</span><span class="p">:</span><span class="s2">&quot;P10&quot;</span><span class="p">,</span><span class="nt">&quot;feeID&quot;</span><span class="p">:</span><span class="s2">&quot;F02&quot;</span><span class="p">,</span><span class="nt">&quot;feeMode&quot;</span><span class="p">:</span><span class="s2">&quot;01&quot;</span><span class="p">,</span><span class="nt">&quot;feeRate&quot;</span><span class="p">:</span><span class="s2">&quot;0.0325&quot;</span><span class="p">,</span><span class="nt">&quot;feeMin&quot;</span><span class="p">:</span><span class="s2">&quot;1&quot;</span><span class="p">,</span><span class="nt">&quot;feeMax&quot;</span><span class="p">:</span><span class="s2">&quot;5&quot;</span><span class="p">},</span>
+ <span class="p">{</span><span class="nt">&quot;prodCode&quot;</span><span class="p">:</span><span class="s2">&quot;P10&quot;</span><span class="p">,</span><span class="nt">&quot;feeID&quot;</span><span class="p">:</span><span class="s2">&quot;F03&quot;</span><span class="p">,</span><span class="nt">&quot;feeMode&quot;</span><span class="p">:</span><span class="s2">&quot;02&quot;</span><span class="p">,</span><span class="nt">&quot;feeFixed&quot;</span><span class="p">:</span><span class="s2">&quot;3&quot;</span><span class="p">}]</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>产品:P10  费率代码:F01  费率: 4.25%</p></li>
+<li><p>产品:P10  费率代码:F02  费率: 3.25% 保底1元 封顶5元</p></li>
+<li><p>产品:P10 费率代码:F03  固定:3元</p></li>
+</ul>
+<p><strong>注：产品综合计费等于三个费率代码分别用本金计算手续费后累加，即为产品手续费。</strong></p>
 </div>
 <div class="section" id="id3">
 <h2>应答报文<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>无卡交易接口 &mdash; 立收产品接口文档 V1.0 文档</title>
+  <title>新无卡交易接口 &mdash; 立收产品接口文档 V1.0 文档</title>
   
 
   
@@ -86,18 +86,17 @@
 <li class="toctree-l1"><a class="reference internal" href="../chapter2/index.html">接入指南</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapter3/index.html">参数规范</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../user/index.html">会员管理接口</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../kjpay/index.html">快捷交易接口</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">无卡交易接口</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../kjpay/index.html">全渠道交易接口</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">新无卡交易接口</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="sum.html">交易概览</a></li>
 <li class="toctree-l2"><a class="reference internal" href="c3001.html">C3001 协议支付-账户认证</a></li>
 <li class="toctree-l2"><a class="reference internal" href="c3002.html">C3002 协议支付-账户签约</a></li>
 <li class="toctree-l2"><a class="reference internal" href="c3003.html">C3003 协议支付</a></li>
-<li class="toctree-l2"><a class="reference internal" href="c3030.html">C3030 协议支付-交易查询</a></li>
-<li class="toctree-l2"><a class="reference internal" href="c3004.html">C3004 支付宝/银联主扫支付</a></li>
-<li class="toctree-l2"><a class="reference internal" href="c3031.html">C3005 支付宝/银联支付查询</a></li>
-<li class="toctree-l2"><a class="reference internal" href="n3005.html">N3005 支付结果异步回调</a></li>
+<li class="toctree-l2"><a class="reference internal" href="p2020.html">P2020 支付查询</a></li>
+<li class="toctree-l2"><a class="reference internal" href="n3004.html">N3004 支付结果异步回调</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../scan/index.html">扫码交易接口</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../dzfile/index.html">对账文件</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../end/index.html">附录</a></li>
 </ul>
@@ -145,7 +144,7 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>无卡交易接口</li>
+      <li>新无卡交易接口</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -165,7 +164,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="id1">
-<h1>无卡交易接口<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<h1>新无卡交易接口<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="sum.html">交易概览</a></li>
@@ -187,26 +186,14 @@
 <li class="toctree-l2"><a class="reference internal" href="c3003.html#id3">响应报文</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="c3030.html">C3030 协议支付-交易查询</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="c3030.html#id1">功能说明</a></li>
-<li class="toctree-l2"><a class="reference internal" href="c3030.html#id2">请求报文</a></li>
-<li class="toctree-l2"><a class="reference internal" href="c3030.html#id3">请求报文</a></li>
-<li class="toctree-l2"><a class="reference internal" href="c3030.html#id4">响应报文</a></li>
+<li class="toctree-l1"><a class="reference internal" href="p2020.html">P2020 支付查询</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="p2020.html#id1">功能说明</a></li>
+<li class="toctree-l2"><a class="reference internal" href="p2020.html#id2">请求报文</a></li>
+<li class="toctree-l2"><a class="reference internal" href="p2020.html#id3">请求报文</a></li>
+<li class="toctree-l2"><a class="reference internal" href="p2020.html#id4">响应报文</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="c3004.html">C3004 支付宝/银联主扫支付</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="c3004.html#id1">功能说明</a></li>
-<li class="toctree-l2"><a class="reference internal" href="c3004.html#id2">请求报文</a></li>
-<li class="toctree-l2"><a class="reference internal" href="c3004.html#id3">响应报文</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="c3031.html">C3005 支付宝/银联支付查询</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="c3031.html#id1">功能说明</a></li>
-<li class="toctree-l2"><a class="reference internal" href="c3031.html#id2">请求报文</a></li>
-<li class="toctree-l2"><a class="reference internal" href="c3031.html#id3">响应报文</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="n3005.html">N3005 支付结果异步回调</a></li>
+<li class="toctree-l1"><a class="reference internal" href="n3004.html">N3004 支付结果异步回调</a></li>
 </ul>
 </div>
 </div>

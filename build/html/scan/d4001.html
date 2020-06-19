@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>C3004 支付宝/银联主扫支付 &mdash; 立收产品接口文档 V1.0 文档</title>
+  <title>D4001 支付宝/银联主扫支付 &mdash; 立收产品接口文档 V1.0 文档</title>
   
 
   
@@ -36,8 +36,8 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="C3005 支付宝/银联支付查询" href="c3031.html" />
-    <link rel="prev" title="C3030 协议支付-交易查询" href="c3030.html" /> 
+    <link rel="next" title="P2020 支付查询" href="p2020.html" />
+    <link rel="prev" title="交易概览" href="sum.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -86,21 +86,18 @@
 <li class="toctree-l1"><a class="reference internal" href="../chapter2/index.html">接入指南</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chapter3/index.html">参数规范</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../user/index.html">会员管理接口</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../kjpay/index.html">快捷交易接口</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">无卡交易接口</a><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../kjpay/index.html">全渠道交易接口</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nocard/index.html">新无卡交易接口</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">扫码交易接口</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="sum.html">交易概览</a></li>
-<li class="toctree-l2"><a class="reference internal" href="c3001.html">C3001 协议支付-账户认证</a></li>
-<li class="toctree-l2"><a class="reference internal" href="c3002.html">C3002 协议支付-账户签约</a></li>
-<li class="toctree-l2"><a class="reference internal" href="c3003.html">C3003 协议支付</a></li>
-<li class="toctree-l2"><a class="reference internal" href="c3030.html">C3030 协议支付-交易查询</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">C3004 支付宝/银联主扫支付</a><ul>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">D4001 支付宝/银联主扫支付</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#id1">功能说明</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id2">请求报文</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id3">响应报文</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="c3031.html">C3005 支付宝/银联支付查询</a></li>
-<li class="toctree-l2"><a class="reference internal" href="n3005.html">N3005 支付结果异步回调</a></li>
+<li class="toctree-l2"><a class="reference internal" href="p2020.html">P2020 支付查询</a></li>
+<li class="toctree-l2"><a class="reference internal" href="n4002.html">N4002 支付结果异步回调</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../dzfile/index.html">对账文件</a></li>
@@ -150,15 +147,15 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-          <li><a href="index.html">无卡交易接口</a> &raquo;</li>
+          <li><a href="index.html">扫码交易接口</a> &raquo;</li>
         
-      <li>C3004 支付宝/银联主扫支付</li>
+      <li>D4001 支付宝/银联主扫支付</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/nocard/c3004.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/scan/d4001.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -171,8 +168,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="c3004">
-<h1>C3004 支付宝/银联主扫支付<a class="headerlink" href="#c3004" title="永久链接至标题">¶</a></h1>
+  <div class="section" id="d4001">
+<h1>D4001 支付宝/银联主扫支付<a class="headerlink" href="#d4001" title="永久链接至标题">¶</a></h1>
 <div class="section" id="id1">
 <h2>功能说明<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
 <ul class="simple">
@@ -201,7 +198,7 @@
 <td><p>产品码</p></td>
 <td><p>prodCode</p></td>
 <td><p>M</p></td>
-<td><p>无卡产品代码</p></td>
+<td><p>银联产品代码/支付宝产品代码</p></td>
 </tr>
 <tr class="row-odd"><td><p>2</p></td>
 <td><p>用户ID</p></td>
@@ -284,10 +281,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="c3031.html" class="btn btn-neutral float-right" title="C3005 支付宝/银联支付查询" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="p2020.html" class="btn btn-neutral float-right" title="P2020 支付查询" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="c3030.html" class="btn btn-neutral float-left" title="C3030 协议支付-交易查询" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="sum.html" class="btn btn-neutral float-left" title="交易概览" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

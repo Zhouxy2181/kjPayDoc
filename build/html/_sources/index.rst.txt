@@ -21,6 +21,8 @@
 
    nocard/index
 
+   scan/index
+
    dzfile/index
 
    end/index
