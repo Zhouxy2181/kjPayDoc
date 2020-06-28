@@ -22,5 +22,49 @@ U1002 短信验证码验证
 |     3     |  短信发送流水号|   origTradeNo  |      M         |        U1001返回平台交易号                    |
 +-----------+----------------+----------------+----------------+-----------------------------------------------+
 
+报文示例
+~~~~~~~~
 
+请求报文：
 
+.. code:: json
+ 
+ {
+      "version": "1.0",
+      "signature": "PxCbOkbs1ib5bE+zHFMInyg+LyFJnpOMcZgeAo4r1Ylz5w0vFnbcVuYdyP3ehPqH6Z+vt6ObBZnXzzJqiv5R9yjpGWcJ5vtkWm794Tz6SsTdHkB0m5w
+      Q3HV/WbbJOttjQ0w7F+uTtSOjRDw68RFMFHKkFZ97lCECjtF/JB3Zkc5e7EvVuajyRBJreVoobVwBJBXohbwm9reFB0ETB9EucVwGhUNdaCVoEftulxq71I6EJuLyMH7v
+      2AFwVp1kTK4gPj3OQgG9Xer8vvV5tv2Uzie88qCv26qsD99esjv/W/E1t5HR91XuegoTCs7hdNFlZce/zDSKDag59J9nAJRguA==",
+      "signType": "01",
+      "encoding": "UTF-8",
+      "requestNo": "20200628203020",
+      "tranCode": "U1002",
+      "tranTime": "20200628203020",
+      "appId": "cs001",
+      "channelId": "",
+      "merId": "",
+      "bizData": "2hVM9TC9SWTix5D50GWcsyjMP5hxdZV2Qr0ANcLardnbyMhuA+GbTa5iXk3aqUgcmkDKjUgx1WQxM6YBmUK9gn5/WxcBwgzmS/aS9yEKUWJLqz6fF5Act
+      SB+EfynRl6K"
+ }
+
+..
+
+响应报文:
+
+.. code:: json
+
+ {
+      "version": "1.0",
+      "signature": "EatKLJ94w68lmN8Xe7ccTfFXl3Mrwk/1QDUXGBmMHhsE5w19hIBf4EkzyfVXiuels31WXNsJr6gg15//8yWigpWvlts7Hq2DJCqqWzL2ftYnOM33wqp
+      0DYo5QpZUgV9wtBJDXWeFbQwTX0dTbakBW+coqOyncNZgTZoIUg+ofauziu82KOUr30BPeToLbAzK8B/YvWnYTfsAah2pW8RRpC7L31L74nfRmUSwFFk8NJjaZGkL9jhK
+      btjeQ5gEJmGrokkl7qcK3CM+iugGxNURBF7WJMnU3vjJi0hf5/HprYunglv2A6NicaZ72+TIdNrM2OWeLZZvf4SB3CBcOPc+3A==",
+      "signType": "01",
+      "encoding": "UTF-8",
+      "requestNo": "20200628203020",
+      "tranCode": "U1002",
+      "appId": "cs001",
+      "tradeNo": "2020062826022368254100378",
+      "respCode": "0000",
+      "respMsg": "短信验证成功"
+ }
+
+..
