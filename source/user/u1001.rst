@@ -16,15 +16,50 @@ U1001 发送短信验证码
 |     2     |   短信模板     |    smsTempId   |     M          |             短信模板ID                        |
 +-----------+----------------+----------------+----------------+-----------------------------------------------+
 
-应答报文
+报文示例
 ~~~~~~~~
 
-+-----------+----------------+----------------+----------------+-----------------------------------------------+
-|    序号   |      域名      |     变量名     |    出现要求    |                 备注                          |
-+-----------+----------------+----------------+----------------+-----------------------------------------------+
-|     1     |    响应码      |     respCode   |      M         |               应答码                          |
-+-----------+----------------+----------------+----------------+-----------------------------------------------+
-|     2     |    应答信息    |     respMsg    |     M          |               应答信息                        |
-+-----------+----------------+----------------+----------------+-----------------------------------------------+
+请求报文：
+
+.. code:: json
+ 
+ {
+    "version": "1.0",
+    "signature": "G0hATWPmg9AaCo1LElq52FdVAY3GbesWOYdrqbupB3IflA798VPZ5TKHTq5OKzzaVk2vjYND2a2RFqaekhVh5nc8uNog1z2nC6XFghIKddXbaoGp
+    ZEjh5G+8FjdiBOlRjibbjYBGiM2jSS2P4We4YMePCoU+aQVEu5IUAbmbZCI8+orhLU9Z4w/JEeudgcqtgEgx2rdmtxzjzwytFYiuRZbnm9i9T6knR5lCjW+X9W/FqA
+    NNhGq7ZkBNtMerKebsSgf7QBx6FvuQ9h6bDAiWcH5MZFDL+xgThTW7kxJYs3fXQjTfppmt7lgDzSZDqkAYCk+j8TrtB3Rg0hm+TZjcIw==",
+    "signType": "01",
+    "encoding": "UTF-8",
+    "requestNo": "20200628191519",
+    "tranCode": "U1002",
+    "tranTime": "20200628191519",
+    "appId": "cs001",
+    "channelId": "",
+    "merId": "",
+    "bizData": "2hVM9TC9SWTix5D50GWcsyjMP5hxdZV2Qr0ANcLardnwQlA+6iFpR2Fq8J56bz+4mkDKjUgx1WQxM6YBmUK9goplvKSXM+e0ZqpG4YiNCSKxlyjenGcD
+    gjq2jMnBM51u"
+ }
+
+..
 
 
+响应报文:
+
+.. code:: json
+
+ {
+    "version": "1.0",
+    "signature": "AbMAj09lKYbD1WenbLK/13mtpksF45SD3J2seMAfHdo0ZlBKtMSqG9qpFlq5eC8r0JJdN5xRNNVjogB7u9r7+yk36DEqceq6a0vKyFVFakgruLNU52x+u
+    Is7wkgX2WNFFssnn3suBzI0BvWvxl2nCv0X42H0uME9M6Ev/aGpDVJ+SD9U9USkkR5MEv50benID+BYIu3phln7vhM/3dXK4d2AhAi0L+C0WrQn8lISKXvU+dPhZ+Wjh5HP
+    pucBJ9ah13eaWFVu1oq4HuhHaqsmVOywwDH0Sr1OlGwF+YsuZkqfgfplXkNXDe4UgQg3xzeRXKWBAmmMQKy7SBrh0GhRkg==",
+    "signType": "01",
+    "encoding": "UTF-8",
+    "requestNo": "20200628191519",
+    "tranCode": "U1002",
+    "appId": "cs001",
+    "tradeNo": "2020062826014880783936462",
+    "respCode": "0000",
+    "respMsg": "短信验证成功"
+ }
+
+..

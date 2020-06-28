@@ -90,7 +90,7 @@
 <li class="toctree-l2 current"><a class="current reference internal" href="#">U1001 发送短信验证码</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#id1">功能说明</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id2">请求报文</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id3">应答报文</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">报文示例</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="u1002.html">U1002 短信验证码验证</a></li>
@@ -211,36 +211,43 @@
 </table>
 </div>
 <div class="section" id="id3">
-<h2>应答报文<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
-<table class="docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 15%" />
-<col style="width: 15%" />
-<col style="width: 15%" />
-<col style="width: 44%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p>序号</p></td>
-<td><p>域名</p></td>
-<td><p>变量名</p></td>
-<td><p>出现要求</p></td>
-<td><p>备注</p></td>
-</tr>
-<tr class="row-even"><td><p>1</p></td>
-<td><p>响应码</p></td>
-<td><p>respCode</p></td>
-<td><p>M</p></td>
-<td><p>应答码</p></td>
-</tr>
-<tr class="row-odd"><td><p>2</p></td>
-<td><p>应答信息</p></td>
-<td><p>respMsg</p></td>
-<td><p>M</p></td>
-<td><p>应答信息</p></td>
-</tr>
-</tbody>
-</table>
+<h2>报文示例<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<p>请求报文：</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+   <span class="nt">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;1.0&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;signature&quot;</span><span class="p">:</span> <span class="s2">&quot;G0hATWPmg9AaCo1LElq52FdVAY3GbesWOYdrqbupB3IflA798VPZ5TKHTq5OKzzaVk2vjYND2a2RFqaekhVh5nc8uNog1z2nC6XFghIKddXbaoGp</span>
+<span class="s2">   ZEjh5G+8FjdiBOlRjibbjYBGiM2jSS2P4We4YMePCoU+aQVEu5IUAbmbZCI8+orhLU9Z4w/JEeudgcqtgEgx2rdmtxzjzwytFYiuRZbnm9i9T6knR5lCjW+X9W/FqA</span>
+<span class="s2">   NNhGq7ZkBNtMerKebsSgf7QBx6FvuQ9h6bDAiWcH5MZFDL+xgThTW7kxJYs3fXQjTfppmt7lgDzSZDqkAYCk+j8TrtB3Rg0hm+TZjcIw==&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;signType&quot;</span><span class="p">:</span> <span class="s2">&quot;01&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;encoding&quot;</span><span class="p">:</span> <span class="s2">&quot;UTF-8&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;requestNo&quot;</span><span class="p">:</span> <span class="s2">&quot;20200628191519&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;tranCode&quot;</span><span class="p">:</span> <span class="s2">&quot;U1002&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;tranTime&quot;</span><span class="p">:</span> <span class="s2">&quot;20200628191519&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;appId&quot;</span><span class="p">:</span> <span class="s2">&quot;cs001&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;channelId&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;merId&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;bizData&quot;</span><span class="p">:</span> <span class="s2">&quot;2hVM9TC9SWTix5D50GWcsyjMP5hxdZV2Qr0ANcLardnwQlA+6iFpR2Fq8J56bz+4mkDKjUgx1WQxM6YBmUK9goplvKSXM+e0ZqpG4YiNCSKxlyjenGcD</span>
+<span class="s2">   gjq2jMnBM51u&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>响应报文:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+   <span class="nt">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;1.0&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;signature&quot;</span><span class="p">:</span> <span class="s2">&quot;AbMAj09lKYbD1WenbLK/13mtpksF45SD3J2seMAfHdo0ZlBKtMSqG9qpFlq5eC8r0JJdN5xRNNVjogB7u9r7+yk36DEqceq6a0vKyFVFakgruLNU52x+u</span>
+<span class="s2">   Is7wkgX2WNFFssnn3suBzI0BvWvxl2nCv0X42H0uME9M6Ev/aGpDVJ+SD9U9USkkR5MEv50benID+BYIu3phln7vhM/3dXK4d2AhAi0L+C0WrQn8lISKXvU+dPhZ+Wjh5HP</span>
+<span class="s2">   pucBJ9ah13eaWFVu1oq4HuhHaqsmVOywwDH0Sr1OlGwF+YsuZkqfgfplXkNXDe4UgQg3xzeRXKWBAmmMQKy7SBrh0GhRkg==&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;signType&quot;</span><span class="p">:</span> <span class="s2">&quot;01&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;encoding&quot;</span><span class="p">:</span> <span class="s2">&quot;UTF-8&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;requestNo&quot;</span><span class="p">:</span> <span class="s2">&quot;20200628191519&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;tranCode&quot;</span><span class="p">:</span> <span class="s2">&quot;U1002&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;appId&quot;</span><span class="p">:</span> <span class="s2">&quot;cs001&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;tradeNo&quot;</span><span class="p">:</span> <span class="s2">&quot;2020062826014880783936462&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;respCode&quot;</span><span class="p">:</span> <span class="s2">&quot;0000&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;respMsg&quot;</span><span class="p">:</span> <span class="s2">&quot;短信验证成功&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
 </div>
 </div>
 
