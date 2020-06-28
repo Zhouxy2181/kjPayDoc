@@ -163,13 +163,13 @@
 <h2>附录一 交易应答码<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <table class="docutils align-default">
 <colgroup>
-<col style="width: 14%" />
-<col style="width: 55%" />
-<col style="width: 32%" />
+<col style="width: 12%" />
+<col style="width: 48%" />
+<col style="width: 40%" />
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p>应答码</p></td>
-<td><p>应答码</p></td>
+<td><p>描述</p></td>
 <td><p>备注</p></td>
 </tr>
 <tr class="row-even"><td><p>0000</p></td>
@@ -177,255 +177,99 @@
 <td></td>
 </tr>
 <tr class="row-odd"><td><p>0001</p></td>
-<td><p>系统内部异常</p></td>
-<td></td>
+<td><p>系统超时</p></td>
+<td><p>需要发起查询</p></td>
 </tr>
 <tr class="row-even"><td><p>0002</p></td>
-<td><p>当前系统繁忙,请稍后再试。</p></td>
-<td></td>
+<td><p>未知</p></td>
+<td><p>需要发起查询</p></td>
 </tr>
 <tr class="row-odd"><td><p>0003</p></td>
+<td><p>系统异常</p></td>
+<td><p>不需要发查询</p></td>
+</tr>
+<tr class="row-even"><td><p>0004</p></td>
 <td><p>验签失败</p></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><p>0004</p></td>
-<td><p>请求体格式有误</p></td>
-<td></td>
-</tr>
 <tr class="row-odd"><td><p>0005</p></td>
-<td><p>请求地址格式错误</p></td>
-<td></td>
+<td><p>格式错误</p></td>
+<td><p>根据文档查询报文格式是否正确</p></td>
 </tr>
 <tr class="row-even"><td><p>0006</p></td>
-<td><p>敏感信息解密失败</p></td>
-<td></td>
+<td><p>解密失败</p></td>
+<td><p>检查需要加密内容是否正确</p></td>
 </tr>
 <tr class="row-odd"><td><p>0007</p></td>
-<td><p>与原交易卡号不一致</p></td>
-<td></td>
+<td><p>参数错误</p></td>
+<td><p>确定上送报文字段是否正确</p></td>
 </tr>
 <tr class="row-even"><td><p>0008</p></td>
-<td><p>签名值不能为空</p></td>
+<td><p>操作失败</p></td>
 <td></td>
 </tr>
 <tr class="row-odd"><td><p>0009</p></td>
-<td><p>类型转换错误</p></td>
+<td><p>超限</p></td>
 <td></td>
 </tr>
 <tr class="row-even"><td><p>0010</p></td>
-<td><p>Html组装失败</p></td>
-<td></td>
+<td><p>不合法</p></td>
+<td><p>详见具体返回信息</p></td>
 </tr>
 <tr class="row-odd"><td><p>0011</p></td>
-<td><p>数字信封组装失败</p></td>
-<td></td>
+<td><p>找不到</p></td>
+<td><p>详见具体返回信息</p></td>
 </tr>
 <tr class="row-even"><td><p>0012</p></td>
-<td><p>单笔金额超出限制</p></td>
+<td><p>交易失败</p></td>
 <td></td>
 </tr>
 <tr class="row-odd"><td><p>0013</p></td>
-<td><p>交易金额超过每日合计限额</p></td>
+<td><p>未绑定卡</p></td>
 <td></td>
 </tr>
 <tr class="row-even"><td><p>0014</p></td>
-<td><p>交易金额超过每日合计限额</p></td>
+<td><p>余额不足</p></td>
 <td></td>
 </tr>
 <tr class="row-odd"><td><p>0015</p></td>
-<td><p>单日交易笔数达到上限</p></td>
-<td></td>
-</tr>
-<tr class="row-even"><td><p>0016</p></td>
-<td><p>单月交易笔数达到上限</p></td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><p>0017</p></td>
-<td><p>未授权中台</p></td>
-<td></td>
-</tr>
-<tr class="row-even"><td><p>0018</p></td>
-<td><p>未授权机构</p></td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><p>0019</p></td>
-<td><p>机构不合法</p></td>
-<td></td>
-</tr>
-<tr class="row-even"><td><p>0020</p></td>
-<td><p>机构IP不合法</p></td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><p>0021</p></td>
-<td><p>找不到对应商户或商户未开通</p></td>
-<td></td>
-</tr>
-<tr class="row-even"><td><p>0022</p></td>
-<td><p>业务类型不合法</p></td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><p>0023</p></td>
-<td><p>提交的商户不属于当前机构</p></td>
-<td></td>
-</tr>
-<tr class="row-even"><td><p>0024</p></td>
-<td><p>找不到路由</p></td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><p>0025</p></td>
-<td><p>路由相关配置缺失</p></td>
-<td></td>
-</tr>
-<tr class="row-even"><td><p>0026</p></td>
-<td><p>路由相关核心参数配置缺失</p></td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><p>0027</p></td>
-<td><p>数据库操作失败</p></td>
-<td></td>
-</tr>
-<tr class="row-even"><td><p>0028</p></td>
-<td><p>交易流水不合法</p></td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><p>0029</p></td>
-<td><p>http返回码非200或未知错误</p></td>
-<td></td>
-</tr>
-<tr class="row-even"><td><p>0030</p></td>
-<td><p>通讯连接超时</p></td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><p>0031</p></td>
-<td><p>读写超时</p></td>
-<td></td>
-</tr>
-<tr class="row-even"><td><p>0032</p></td>
-<td><p>请求后台渠道不存在</p></td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><p>0033</p></td>
-<td><p>请求后台渠道异常</p></td>
-<td></td>
-</tr>
-<tr class="row-even"><td><p>0034</p></td>
-<td><p>请求参数有误</p></td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><p>0035</p></td>
-<td><p>请求流水号重复</p></td>
-<td></td>
-</tr>
-<tr class="row-even"><td><p>0036</p></td>
-<td><p>必填字段不能为空</p></td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><p>0037</p></td>
-<td><p>找不到相关对应支付标识</p></td>
-<td></td>
-</tr>
-<tr class="row-even"><td><p>0038</p></td>
-<td><p>查询原交易流水失败</p></td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><p>0039</p></td>
-<td><p>原交易非成功状态</p></td>
-<td></td>
-</tr>
-<tr class="row-even"><td><p>0040</p></td>
-<td><p>退款金额超过限额</p></td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><p>0041</p></td>
-<td><p>未查询到协议号</p></td>
-<td></td>
-</tr>
-<tr class="row-even"><td><p>0042</p></td>
-<td><p>与原交易商户号不一致</p></td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><p>0043</p></td>
-<td><p>未查询到原交易流水</p></td>
-<td></td>
-</tr>
-<tr class="row-even"><td><p>0044</p></td>
-<td><p>当前交易不支持退款</p></td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><p>0045</p></td>
-<td><p>网联控制位获取异常</p></td>
-<td></td>
-</tr>
-<tr class="row-even"><td><p>0046</p></td>
-<td><p>未知</p></td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><p>0047</p></td>
-<td><p>交易金额与原订单金额不一致</p></td>
-<td></td>
-</tr>
-<tr class="row-even"><td><p>0048</p></td>
-<td><p>商户级别的错误</p></td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><p>0049</p></td>
-<td><p>错误/失败</p></td>
-<td></td>
-</tr>
-<tr class="row-even"><td><p>0050</p></td>
-<td><p>找不到相关记录</p></td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><p>0051</p></td>
-<td><p>验证码错误</p></td>
-<td></td>
-</tr>
-<tr class="row-even"><td><p>0052</p></td>
-<td><p>请求的功能不支持</p></td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><p>0053</p></td>
-<td><p>无效的开户信息</p></td>
-<td></td>
-</tr>
-<tr class="row-even"><td><p>0054</p></td>
-<td><p>状态未确认/请求正在处理中/有缺陷的成功</p></td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><p>0055</p></td>
-<td><p>账户已签约</p></td>
-<td></td>
-</tr>
-<tr class="row-even"><td><p>0056</p></td>
-<td><p>申请认证操作失败，重试</p></td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><p>0057</p></td>
-<td><p>没有绑定卡</p></td>
-<td></td>
-</tr>
-<tr class="row-even"><td><p>0058</p></td>
-<td><p>退货金额超过原交易</p></td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><p>0059</p></td>
-<td><p>余额/头寸不足</p></td>
-<td></td>
-</tr>
-<tr class="row-even"><td><p>0060</p></td>
-<td><p>超限额</p></td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><p>0061</p></td>
 <td><p>待支付</p></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><p>0062</p></td>
-<td><p>上级渠道已关闭</p></td>
+<tr class="row-even"><td><p>0016</p></td>
+<td><p>已关闭</p></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><p>0063</p></td>
-<td><p>非当日交易，不能撤销</p></td>
+<tr class="row-odd"><td><p>0017</p></td>
+<td><p>不支持</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>0018</p></td>
+<td><p>其他错误</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>0019</p></td>
+<td><p>未认证</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>0020</p></td>
+<td><p>配置错误</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>0021</p></td>
+<td><p>重复</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>0022</p></td>
+<td><p>不存在</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>0023</p></td>
+<td><p>不一致</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>0024</p></td>
+<td><p>已签约</p></td>
 <td></td>
 </tr>
 </tbody>
